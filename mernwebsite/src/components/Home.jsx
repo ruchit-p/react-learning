@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
+import Services from './Services';
 
 const Home = () => {
   return (
@@ -8,7 +10,7 @@ const Home = () => {
           <div className="row justify-content-center">
             <div className="col-md-8 mt-5">
               <h1 className="display-4 fw-bolder mb-4 text-center text-white ">
-                Feels the fresh business persective
+                Feel the fresh business persective
               </h1>
               <p className="lead text-center fs-4 mb-5 text-white">
                 lasf sfjslk sdflskdj sifldsjfl isfldshfl
@@ -16,17 +18,18 @@ const Home = () => {
                 skdjflsak.
               </p>
               <div className="buttons d-flex justify-content-center">
-                <button className="btn btn-light me-4 rounded-pill py-2">
+                <NavLink to='/about' className="btn btn-light me-4 rounded-pill py-2">
                   Get Quote
-                </button>
-                <button className="btn btn-outline-light me-4 rounded-pill py-2">
+                </NavLink>
+                <NavLink to='/services' className="btn btn-outline-light me-4 rounded-pill py-2">
                   Our Services
-                </button>
+                </NavLink>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Services/>
     </div>
   );
 }
