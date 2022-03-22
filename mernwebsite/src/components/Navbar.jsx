@@ -56,6 +56,12 @@ const Navbar = () => {
             >
               <i className="fa fa-user-plus me-2"></i>Dashboard
             </NavLink>
+            <NavLink
+              to="/logout"
+              className="btn btn-outline-primary ms-2 px-4 rounded-pill"
+            >
+              <i className="fa fa-sign-out me-2"></i>Logout
+            </NavLink>
           </div>
         </div>
       </nav>
