@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -28,12 +32,14 @@ const Login = () => {
           email, password
         })
       });
+      
 
       if(res.status === 400 || !res){
         window.alert("Invalid Credentials");
       } else {
         window.alert("Login Successful");
         window.location.reload();
+        navigate('/dashboard');
         // token is generated when logged in
         
       }

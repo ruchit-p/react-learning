@@ -29,7 +29,7 @@ const Logout = () => {
     useEffect(() => {
         logout();
     }, 
-    // []
+    []
     );
 
 

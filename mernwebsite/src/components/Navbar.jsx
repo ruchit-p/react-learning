@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light shadow">
@@ -38,30 +38,38 @@ const Navbar = () => {
             <NavLink className="navbar-brand fw-bolder fs-4 mx-auto" to="/">
               Just Worx
             </NavLink>
-            <NavLink
-              to="/login"
-              className="btn btn-outline-primary ms-auto px-4 rounded-pill"
-            >
-              <i className="fa fa-sign-in me-2"></i>Login
-            </NavLink>
-            <NavLink
-              to="/register"
-              className="btn btn-outline-primary ms-2 px-4 rounded-pill"
-            >
-              <i className="fa fa-user-plus me-2"></i>Register
-            </NavLink>
-            <NavLink
-              to="/dashboard"
-              className="btn btn-outline-primary ms-2 px-4 rounded-pill"
-            >
-              <i className="fa fa-user-plus me-2"></i>Dashboard
-            </NavLink>
-            <NavLink
-              to="/logout"
-              className="btn btn-outline-primary ms-2 px-4 rounded-pill"
-            >
-              <i className="fa fa-sign-out me-2"></i>Logout
-            </NavLink>
+
+            {props.auth ? (
+              <>
+                <NavLink
+                  to="/login"
+                  className="btn btn-outline-primary ms-auto px-4 rounded-pill"
+                >
+                  <i className="fa fa-sign-in me-2"></i>Login
+                </NavLink>
+                <NavLink
+                  to="/register"
+                  className="btn btn-outline-primary ms-2 px-4 rounded-pill"
+                >
+                  <i className="fa fa-user-plus me-2"></i>Register
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink
+                  to="/dashboard"
+                  className="btn btn-outline-primary ms-2 px-4 rounded-pill"
+                >
+                  <i className="fa fa-user-plus me-2"></i>Dashboard
+                </NavLink>
+                <NavLink
+                  to="/logout"
+                  className="btn btn-outline-primary ms-2 px-4 rounded-pill"
+                >
+                  <i className="fa fa-sign-out me-2"></i>Logout
+                </NavLink>
+              </>
+            )}
           </div>
         </div>
       </nav>

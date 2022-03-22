@@ -5,6 +5,7 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const Users = require("./models/userSchema");
+const authenticate = require('./middleware/authenticate')
 
 const app = express();
 const PORT = process.env.PORT;
@@ -88,6 +89,10 @@ app.get('/logout', (req, res) => {
     res.status(200).send("User logged out");
 })
 
+// Authentication
+app.get('/auth', authenticate, (req, res) => {
+
+})
 
 
 // run server
