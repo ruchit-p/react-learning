@@ -13,9 +13,8 @@ const Home = () => {
                 Feel the fresh business persective
               </h1>
               <p className="lead text-center fs-4 mb-5 text-white">
-                lasf sfjslk sdflskdj sifldsjfl isfldshfl
-                ijkldvjljiosfdjflsdjfslkdjfs sdfdslfjs ajfldsjflksjdflkasjd
-                skdjflsak.
+
+Discover actionable insights and strategies to transform your operations and drive growth. We are committed to delivering excellence across all verticals.
               </p>
               <div className="buttons d-flex justify-content-center">
                 <NavLink to='/about' className="btn btn-light me-4 rounded-pill py-2">
